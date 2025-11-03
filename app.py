@@ -236,7 +236,7 @@ elif st.session_state.screen == 'job_ai':
     
     try:
         # 제미나이 모델 생성 및 응답
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         # st.spinner: 로딩 중임을 표시
         with st.spinner(f"'{job}'에 대해 AI가 열심히 생각 중... 🧠"):
@@ -249,3 +249,4 @@ elif st.session_state.screen == 'job_ai':
 
     st.button("◀ 결과 화면으로 돌아가기", on_click=lambda: st.session_state.update(screen='result'), use_container_width=True)
     st.button("처음으로 돌아가기", on_click=restart_quiz, use_container_width=True)
+
